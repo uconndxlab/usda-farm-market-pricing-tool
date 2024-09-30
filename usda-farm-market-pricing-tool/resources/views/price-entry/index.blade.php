@@ -12,7 +12,7 @@
         </div>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-2 sm:py-6 md:py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
@@ -22,18 +22,22 @@
                         </div>
                     @endif
 
-                    @if (session('error'))
+					@if ($errors->any())
                         <div class="mb-4 text-red-600">
-                            {{ session('error') }}
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
                         </div>
                     @endif
 
-                    <form>
+                    <form action="{{ route('price-entry.store') }}" method="POST">
                         @csrf
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 mb-2">
-							<div class="mb-4">
-								<label for="crop_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop</label>
-								<select id="crop_id" name="crop_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-x-10 mb-2">
+							<div>
+								<label for="crop" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop</label>
+								<select id="crop" name="crop" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
 									<option value="">Select a crop</option>
 									@foreach ($crops as $crop)
 										<option value="{{ $crop }}">{{ $crop }}</option>
@@ -41,21 +45,19 @@
 								</select>
 							</div>
 							
-							<div class="mb-4">
-								<label for="crop_variety_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop Variety</label>
-								<select id="crop_variety_id" name="crop_variety_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
+							<div>
+								<label for="crop_variety" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop Variety</label>
+								<select id="crop_variety" name="crop_variety" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
 									<option value="">Select a crop variety</option>
 									@foreach ($cropVarieties as $cropVariety)
 										<option value="{{ $cropVariety }}">{{ $cropVariety }}</option>
 									@endforeach
 								</select>
 							</div>
-						</div>
 
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 mb-2">
-							<div class="mb-4">
-								<label for="production_method_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Production Method</label>
-								<select id="production_method_id" name="production_method_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
+							<div>
+								<label for="production_method" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Production Method</label>
+								<select id="production_method" name="production_method" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
 									<option value="">Select a production method</option>
 									@foreach ($productionMethods as $method)
 										<option value="{{ $method }}">{{ $method }}</option>
@@ -63,21 +65,19 @@
 								</select>
 							</div>
 
-							<div class="mb-4">
-								<label for="sales_method_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Sales Method</label>
-								<select id="sales_method_id" name="sales_method_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
+							<div>
+								<label for="sales_method" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Sales Method</label>
+								<select id="sales_method" name="sales_method" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
 									<option value="">Select a sales method</option>
 									@foreach ($salesMethods as $method)
 										<option value="{{ $method }}">{{ $method }}</option>
 									@endforeach
 								</select>
 							</div>
-						</div>
-
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 mb-2">
-							<div class="mb-4">
+	
+							<div>
 								<label for="unit" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Unit</label>
-								<select id="unit" name="unit" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
+								<select id="unit" name="unit" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
 									<option value="">Select a unit</option>
 									@foreach ($units as $unit)
 										<option value="{{ $unit }}">{{ $unit }}</option>
@@ -85,11 +85,11 @@
 								</select>
 							</div>
 
-							<div class="mb-4">
+							<div>
 								<label for="price_per_unit" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Price Per Unit</label>
 								<div class="relative mt-1">
 									<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-600">$</span>
-									<input type="number" step="0.01" id="price_per_unit" name="price_per_unit" placeholder="Enter the price per unit" class="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" inputmode="decimal">
+									<input type="number" step="0.01" id="price_per_unit" name="price_per_unit" placeholder="Enter the price per unit" class="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" inputmode="decimal" required>
 								</div>
 							</div>
 						</div>

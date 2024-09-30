@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PriceEntry;
 use Illuminate\Http\Request;
 
 class PriceEntryController extends Controller
@@ -41,15 +42,26 @@ class PriceEntryController extends Controller
 	public function storePrice(Request $request)
 	{
 		$request->validate([
-			'crop_id' => 'required|integer',
+			'crop' => 'required|string|max:255',
 			'crop_variety' => 'required|string|max:255',
 			'production_method' => 'required|string|max:255',
 			'sales_method' => 'required|string|max:255',
 			'unit' => 'required|string|max:255',
-			'price' => 'required|numeric|min:0',
+			'price_per_unit' => 'required|numeric|min:0',
 		]);	
 
 		// Save the price entry to the database
+		PriceEntry::create([
+			'user_id' => auth()->user()->id,
+			'county' => $request->session()->get('county'),
+			'farmers_market' => $request->session()->get('farmersMarket'),
+			'crop' => $request->input('crop'),
+			'variety' => $request->input('crop_variety'),
+			'production_method' => $request->input('production_method'),
+			'sales_method' => $request->input('sales_method'),
+			'unit' => $request->input('unit'),
+			'price_per_unit' => $request->input('price_per_unit'),
+		]);
 
 		return redirect()->route('price-entry.index')->with('success', 'Price entry saved successfully');
 	}
