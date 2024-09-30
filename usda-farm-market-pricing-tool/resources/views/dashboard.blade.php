@@ -10,7 +10,9 @@
 			@if(session('farmersMarket'))
                 <span class="text-sm text-gray-600 dark:text-gray-400"> | Farmers Market: {{ session('farmersMarket') }}</span>
             @endif
-			<a href="{{ route('set-location') }}" class="text-sm text-blue-600 dark:text-blue-400 ml-4">Change</a>
+			@if(session('county') || session('farmersMarket'))
+				<a href="{{ route('set-location') }}" class="text-sm text-blue-600 dark:text-blue-400 ml-4">Change</a>
+			@endif
 
         </div>
     </x-slot>
