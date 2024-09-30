@@ -30,7 +30,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+	Route::get('/set-location', [PriceEntryController::class, 'setLocation'])->name('set-location');
+	Route::post('/set-location', [PriceEntryController::class, 'storeLocation'])->name('set-location.store');
 	Route::get('/price-entry', [PriceEntryController::class, 'index'])->name('price-entry.index');
+	Route::post('/price-entry', [PriceEntryController::class, 'storePrice'])->name('price-entry.store');
 });
 
 require __DIR__.'/auth.php';

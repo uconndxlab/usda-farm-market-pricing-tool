@@ -3,6 +3,13 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Price Entry') }}
         </h2>
+		<div class="mt-2">
+            <span class="text-sm text-gray-600 dark:text-gray-400">County: {{ session('county') }}</span>
+            @if(session('farmersMarket'))
+                <span class="text-sm text-gray-600 dark:text-gray-400"> | Farmers Market: {{ session('farmersMarket') }}</span>
+            @endif
+            <a href="{{ route('set-location') }}" class="text-sm text-blue-600 dark:text-blue-400 ml-4">Change</a>
+        </div>
     </x-slot>
 
     <div class="py-12">
@@ -23,40 +30,6 @@
 
                     <form>
                         @csrf
-						<div class="mb-4">
-                            <label for="date" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Date</label>
-                            <input type="date" id="date" name="date" value="{{ date('Y-m-d') }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
-                        </div>
-
-						<div class="mb-4">
-                            <label for="state_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">State</label>
-                            <select id="state_id" name="state_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
-                                <option value="">Select a state</option>
-                                @foreach ($states as $state)
-                                    <option value="{{ $state }}">{{ $state }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="county_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">County</label>
-                            <select id="county_id" name="county_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
-                                <option value="">Select a county</option>
-                                @foreach ($counties as $county)
-                                    <option value="{{ $county }}">{{ $county }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="market_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Farmers Market</label>
-                            <select id="market_id" name="market_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
-                                <option value="">Select a farmers market</option>
-                                @foreach ($farmersMarkets as $market)
-                                    <option value="{{ $market }}">{{ $market }}</option>
-                                @endforeach
-                            </select>
-                        </div>
 
                         <div class="mb-4">
                             <label for="crop_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop</label>
@@ -116,14 +89,6 @@
 								<input type="number" step="0.01" id="price_per_unit" name="price_per_unit" placeholder="Enter the price per unit" class="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" inputmode="decimal">
 							</div>
 						</div>
-
-						<div class="mb-4">
-                            <label for="price" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Price (USD)</label>
-                            <div class="relative mt-1">
-                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-600">$</span>
-                                <input type="number" step="0.01" id="price" name="price" placeholder="Enter the price" class="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" inputmode="decimal">
-                            </div>
-                        </div>
 
                         <div class="flex items-center justify-end mt-4">
                             <x-primary-button class="ml-3">
