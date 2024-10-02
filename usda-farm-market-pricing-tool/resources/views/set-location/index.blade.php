@@ -9,6 +9,16 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+					@if ($errors->any())
+                        <div class="mb-4 text-red-600">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <form action="{{ route('set-location.store') }}" method="POST">
                         @csrf
 
@@ -28,6 +38,9 @@
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
+							<a href="{{ route('set-location.reset') }}" class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+                                {{ __('Reset Location') }}
+                            </a>
                             <x-primary-button class="ml-3">
                                 {{ __('Set Location') }}
                             </x-primary-button>

@@ -52,6 +52,13 @@ class PriceEntryController extends Controller
 		return redirect()->route('price-entry.index');
 	}
 
+	public function resetLocation(Request $request)
+	{
+		$request->session()->forget('county');
+		$request->session()->forget('farmersMarket');
+		return redirect()->route('dashboard');
+	}
+
 	public function storePrice(Request $request)
 	{
 		$request->validate([
