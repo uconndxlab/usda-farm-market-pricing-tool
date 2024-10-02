@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [PriceEntryController::class, 'showDashboard'])
+	->middleware(['auth', 'verified'])
+	->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -30,10 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+	Route::get('/price-entry/{id}', [PriceEntryController::class, 'showPrice'])->name('price-entry.show');
+	Route::delete('/price-entry/{id}', [PriceEntryController::class, 'deletePrice'])->name('price-entry.delete');
 	Route::get('/set-location', [PriceEntryController::class, 'setLocation'])->name('set-location');
 	Route::post('/set-location', [PriceEntryController::class, 'storeLocation'])->name('set-location.store');
 	Route::get('/price-entry', [PriceEntryController::class, 'index'])->name('price-entry.index');
 	Route::post('/price-entry', [PriceEntryController::class, 'storePrice'])->name('price-entry.store');
+	Route::get('/price-entry/{id}', [PriceEntryController::class, 'showPrice'])->name('price-entry.show');
 });
 
 require __DIR__.'/auth.php';

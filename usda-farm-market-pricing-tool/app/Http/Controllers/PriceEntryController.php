@@ -7,6 +7,19 @@ use Illuminate\Http\Request;
 
 class PriceEntryController extends Controller
 {
+	public function showDashboard(Request $request)
+	{
+		$user = auth()->user();
+		$priceEntries = PriceEntry::where('user_id', $user->id)->get();
+		return view('dashboard', compact('priceEntries'));
+	}
+
+	public function showPrice(Request $request, $id)
+	{
+		$priceEntry = PriceEntry::find($id);
+		return view('price-entry.show', compact('priceEntry'));
+	}
+
     public function index(Request $request)
 	{
 		
@@ -64,5 +77,14 @@ class PriceEntryController extends Controller
 		]);
 
 		return redirect()->route('price-entry.index')->with('success', 'Price entry saved successfully');
+	}
+
+	public function deletePrice(Request $request, $id)
+	{
+		$priceEntry = PriceEntry::find($id);
+		if ($priceEntry->user_id === auth()->user()->id) {
+			$priceEntry->delete();
+		}
+		return redirect()->route('dashboard');
 	}
 }
