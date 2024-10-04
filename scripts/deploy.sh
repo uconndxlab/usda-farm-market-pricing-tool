@@ -6,7 +6,7 @@ echo "Running as $(whoami)"
 
 cd usda-farm-market-pricing-tool
 
-composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+DB_CONNECTION=sqlite composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
 php artisan optimize
 
