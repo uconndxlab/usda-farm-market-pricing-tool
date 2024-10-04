@@ -12,12 +12,12 @@ cd usda-farm-market-pricing-tool
 
 DB_CONNECTION=sqlite composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
-chown -R :www-data .
-chmod -R g+w .
-
 npm ci
 npm run build
 rm -rf node_modules
+
+chown -R :www-data .
+chmod -R g+w .
 
 if [ -d /var/www/marketpricing.core.uconn.edu/ ]; then
     echo "Copying files to the server"
@@ -26,7 +26,6 @@ if [ -d /var/www/marketpricing.core.uconn.edu/ ]; then
     cd /var/www/marketpricing.core.uconn.edu
     php artisan migrate --force
     php artisan optimize
-    chown -R :www-data .
 else 
     echo "Skipping file copy. Prod directory does not exist."
 fi
