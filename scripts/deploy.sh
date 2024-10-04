@@ -3,6 +3,7 @@ set -e
 
 # Which user is running this script?
 echo "Running as $(whoami)"
+source $HOME/.bashrc
 
 cd usda-farm-market-pricing-tool
 
