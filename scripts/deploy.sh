@@ -8,9 +8,9 @@ cd usda-farm-market-pricing-tool
 
 DB_CONNECTION=sqlite composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
-php artisan optimize
+# php artisan optimize
 
-php artisan migrate --force
+# php artisan migrate --force
 
 chown -R :www-data .
 
