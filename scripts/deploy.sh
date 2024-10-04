@@ -13,9 +13,11 @@ cd usda-farm-market-pricing-tool
 DB_CONNECTION=sqlite composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
 chown -R :www-data .
+chmod -R g+w .
 
 npm ci
 npm run build
+rm -rf node_modules
 
 if [ -d /var/www/marketpricing.core.uconn.edu/ ]; then
     echo "Copying files to the server"
