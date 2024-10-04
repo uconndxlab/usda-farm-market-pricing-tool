@@ -19,7 +19,7 @@ npm run build
 
 if [ -d /var/www/marketpricing.core.uconn.edu/ ]; then
     echo "Copying files to the server"
-    rsync -arvp --omit-dir-times ./ /var/www/marketpricing.core.uconn.edu/
+    rsync -arv --omit-dir-times ./ /var/www/marketpricing.core.uconn.edu/
 
     cd /var/www/marketpricing.core.uconn.edu
     php artisan migrate --force
