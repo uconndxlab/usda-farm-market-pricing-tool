@@ -19,8 +19,8 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-x-10 mb-6">
                         <div class="mb-4">
-							<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100">County</h3>
-							<p class="text-lg text-gray-700 dark:text-gray-400">{{ $priceEntry->county }}</p>
+							<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100">Town</h3>
+							<p class="text-lg text-gray-700 dark:text-gray-400">{{ $priceEntry->town }}</p>
 						</div>
 						<div class="mb-4">
 							<h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100">Farmers Market</h3>
