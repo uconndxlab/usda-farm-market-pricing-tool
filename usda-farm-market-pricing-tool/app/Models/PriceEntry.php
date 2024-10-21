@@ -11,7 +11,7 @@ class PriceEntry extends Model
 
 	protected $fillable = [
 		'user_id',
-		'county',
+		'town',
 		'farmers_market',
 		'crop',
 		'variety',

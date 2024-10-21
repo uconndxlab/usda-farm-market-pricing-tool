@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('price_entries', function (Blueprint $table) {
             $table->id();
 			$table->unsignedBigInteger('user_id');
-			$table->string('county');
+			$table->string('town');
 			$table->string('farmers_market')->nullable();
 			$table->string('crop');
 			$table->string('variety');
