@@ -25,11 +25,11 @@ class FarmersMarketSeeder extends Seeder
 
 		foreach ($rows as $row) {
 			$data = str_getcsv($row);
-			$town = Town::where('name', $data[1])->first();
-			if (!$town) {
-				$town = Town::create(['name' => $data[1]]);
-			}
-			FarmersMarket::create([
+			if (count($data) < 2) continue; // Skip empty or invalid rows
+
+			$town = Town::firstOrCreate(['name' => $data[1]]);
+			
+			FarmersMarket::firstOrCreate([
 				'name' => $data[0],
 				'town_id' => $town->id,
 			]);

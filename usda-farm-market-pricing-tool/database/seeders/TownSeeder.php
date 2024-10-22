@@ -91,7 +91,7 @@ class TownSeeder extends Seeder
         ];
 
 		foreach ($towns as $town) {
-			Town::create(['name' => $town]);
+			Town::firstOrCreate(['name' => $town]);
 		}
     }
 }
