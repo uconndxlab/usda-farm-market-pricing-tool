@@ -25,6 +25,7 @@ if [ -d /var/www/marketpricing.core.uconn.edu/ ]; then
 
     cd /var/www/marketpricing.core.uconn.edu
     php artisan migrate --force
+	php artisan db:seed --force
     php artisan optimize
 else 
     echo "Skipping file copy. Prod directory does not exist."
