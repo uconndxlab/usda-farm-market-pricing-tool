@@ -31,34 +31,6 @@ class PriceEntryController extends Controller
 		return view('price-entry.index', compact( 'crops', 'cropVarieties', 'productionMethods', 'salesMethods', 'units'));
 	}
 
-	public function setLocation(Request $request)
-	{
-		$counties = ["Fairfield", "Litchfield", "Hartford", "Tolland", "Windham", "New London", "Middlesex", "New Haven"];
-		$currentCounty = $request->session()->get('county', '');
-        $currentFarmersMarket = $request->session()->get('farmersMarket', '');
-		return view('set-location.index', compact('counties', 'currentCounty', 'currentFarmersMarket'));
-	}
-
-	public function storeLocation(Request $request)
-	{
-		$request->validate([
-			'county' => 'required|string|max:255',
-			'farmersMarket' => 'nullable|string|max:255',
-		]);
-
-		$request->session()->put('county', $request->input('county'));
-        $request->session()->put('farmersMarket', $request->input('farmersMarket'));
-		
-		return redirect()->route('price-entry.index');
-	}
-
-	public function resetLocation(Request $request)
-	{
-		$request->session()->forget('county');
-		$request->session()->forget('farmersMarket');
-		return redirect()->route('dashboard');
-	}
-
 	public function storePrice(Request $request)
 	{
 		$request->validate([
@@ -73,7 +45,7 @@ class PriceEntryController extends Controller
 		// Save the price entry to the database
 		PriceEntry::create([
 			'user_id' => auth()->user()->id,
-			'county' => $request->session()->get('county'),
+			'town' => $request->session()->get('town'),
 			'farmers_market' => $request->session()->get('farmersMarket'),
 			'crop' => $request->input('crop'),
 			'variety' => $request->input('crop_variety'),

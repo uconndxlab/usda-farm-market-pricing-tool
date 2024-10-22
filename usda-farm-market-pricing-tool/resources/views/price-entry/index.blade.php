@@ -4,11 +4,11 @@
             {{ __('Price Entry') }}
         </h2>
 		<div class="mt-2">
-            <span class="text-sm text-gray-600 dark:text-gray-400">County: {{ session('county') }}</span>
+            <span class="text-sm text-gray-600 dark:text-gray-400">Town: {{ session('town') }}</span>
             @if(session('farmersMarket'))
                 <span class="text-sm text-gray-600 dark:text-gray-400"> | Farmers Market: {{ session('farmersMarket') }}</span>
             @endif
-            <a href="{{ route('set-location') }}" class="text-sm text-blue-600 dark:text-blue-400 ml-4">Change</a>
+            <a href="{{ route('location.index') }}" class="text-sm text-blue-600 dark:text-blue-400 ml-4">Change</a>
         </div>
     </x-slot>
 
