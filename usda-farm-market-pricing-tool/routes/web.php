@@ -42,8 +42,8 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
 	Route::get('/price-entry/{id}', [PriceEntryController::class, 'showPrice'])->name('price-entry.show');
 	Route::delete('/price-entry/{id}', [PriceEntryController::class, 'deletePrice'])->name('price-entry.delete');
-	Route::get('/price-entry', [PriceEntryController::class, 'index'])->name('price-entry.index');
-	Route::post('/price-entry', [PriceEntryController::class, 'storePrice'])->name('price-entry.store');
+	Route::get('/price-entry', [PriceEntryController::class, 'index'])->middleware('check.town')->name('price-entry.index');
+	Route::post('/price-entry', [PriceEntryController::class, 'storePrice'])->middleware('check.town')->name('price-entry.store');
 });
 
 require __DIR__.'/auth.php';
