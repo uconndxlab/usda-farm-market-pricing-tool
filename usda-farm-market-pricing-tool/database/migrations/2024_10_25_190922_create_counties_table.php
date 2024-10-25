@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('farmers_markets', function (Blueprint $table) {
+        Schema::create('counties', function (Blueprint $table) {
             $table->id();
 			$table->string('name');
-			$table->foreignId('town_id')->constrained('towns')->cascadeOnDelete();
+			$table->foreignId('state_id')->constrained('states');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('farmers_markets');
+        Schema::dropIfExists('counties');
     }
 };

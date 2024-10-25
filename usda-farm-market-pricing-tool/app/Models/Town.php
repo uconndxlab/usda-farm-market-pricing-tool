@@ -9,7 +9,12 @@ class Town extends Model
 {
     use HasFactory;
 
-	protected $fillable = ['name'];
+	protected $fillable = ['name', 'county_id'];
+
+	public function county()
+	{
+		return $this->belongsTo(County::class);
+	}
 
 	public function farmersMarkets()
 	{
