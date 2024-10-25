@@ -14,9 +14,17 @@ return new class extends Migration
         Schema::create('zip_codes', function (Blueprint $table) {
             $table->id();
 			$table->string('zip_code', 5)->unique();
-			$table->foreignId('town_id')->constrained('towns')->cascadeOnDelete();
             $table->timestamps();
         });
+
+		Schema::create('town_zip_code', function (Blueprint $table) {
+			$table->id();
+			$table->foreignId('town_id')->constrained('towns')->cascadeOnDelete();
+			$table->foreignId('zip_code_id')->constrained('zip_codes')->cascadeOnDelete();
+			$table->timestamps();
+
+			$table->unique(['town_id', 'zip_code_id']);
+		});
     }
 
     /**
@@ -25,5 +33,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('zip_codes');
+		Schema::dropIfExists('town_zip_code');
     }
 };

@@ -23,6 +23,6 @@ class Town extends Model
 
 	public function zipCodes()
 	{
-		return $this->hasMany(ZipCode::class);
+		return $this->belongsToMany(ZipCode::class);
 	}
 }

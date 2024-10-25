@@ -33,16 +33,16 @@ class TownSeeder extends Seeder
 			$county = County::where('name', $data[3])->first();
 			if (!$county) continue;
 
-			Town::firstOrCreate([
+			$town = Town::firstOrCreate([
 				'name' => $data[2],
 				'county_id' => $county->id,
 			]);
 
-			$town = Town::where('name', $data[2])->first();
-			ZipCode::firstOrCreate([
+			$zipCode = ZipCode::firstOrCreate([
 				'zip_code' => $data[1],
-				'town_id' => $town->id,
 			]);
+
+			$town->zipCodes()->syncWithoutDetaching([$zipCode->id]);
 		}
     }
 }

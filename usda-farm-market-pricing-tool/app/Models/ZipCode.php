@@ -9,10 +9,10 @@ class ZipCode extends Model
 {
     use HasFactory;
 
-	protected $fillable = ['zip_code', 'town_id'];
+	protected $fillable = ['zip_code'];
 	
-	public function town()
+	public function towns()
 	{
-		return $this->belongsTo(Town::class);
+		return $this->belongsToMany(Town::class);
 	}
 }
