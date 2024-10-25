@@ -1,0 +1,430 @@
+id,zip,name,county
+1,06404,Botsford,Fairfield
+2,06440,Hawleyville,Fairfield
+3,06468,Monroe,Fairfield
+4,06470,Newtown,Fairfield
+5,06482,Sandy Hook,Fairfield
+6,06484,Shelton,Fairfield
+7,06491,Stevenson,Fairfield
+8,06601,Bridgeport,Fairfield
+9,06602,Bridgeport,Fairfield
+10,06604,Bridgeport,Fairfield
+11,06605,Bridgeport,Fairfield
+12,06606,Bridgeport,Fairfield
+13,06607,Bridgeport,Fairfield
+14,06608,Bridgeport,Fairfield
+15,06610,Bridgeport,Fairfield
+16,06611,Trumbull,Fairfield
+17,06612,Easton,Fairfield
+18,06614,Stratford,Fairfield
+19,06615,Stratford,Fairfield
+20,06673,Bridgeport,Fairfield
+21,06699,Bridgeport,Fairfield
+22,06784,Sherman,Fairfield
+23,06801,Bethel,Fairfield
+24,06804,Brookfield,Fairfield
+25,06807,Cos Cob,Fairfield
+26,06810,Danbury,Fairfield
+27,06811,Danbury,Fairfield
+28,06812,New Fairfield,Fairfield
+29,06813,Danbury,Fairfield
+30,06814,Danbury,Fairfield
+31,06816,Danbury,Fairfield
+32,06817,Danbury,Fairfield
+33,06820,Darien,Fairfield
+34,06824,Fairfield,Fairfield
+35,06825,Fairfield,Fairfield
+36,06828,Fairfield,Fairfield
+37,06829,Georgetown,Fairfield
+38,06830,Greenwich,Fairfield
+39,06831,Greenwich,Fairfield
+40,06836,Greenwich,Fairfield
+41,06838,Greens Farms,Fairfield
+42,06840,New Canaan,Fairfield
+43,06850,Norwalk,Fairfield
+44,06851,Norwalk,Fairfield
+45,06852,Norwalk,Fairfield
+46,06853,Norwalk,Fairfield
+47,06854,Norwalk,Fairfield
+48,06855,Norwalk,Fairfield
+49,06856,Norwalk,Fairfield
+50,06857,Norwalk,Fairfield
+51,06858,Norwalk,Fairfield
+52,06860,Norwalk,Fairfield
+53,06870,Old Greenwich,Fairfield
+54,06875,Redding Center,Fairfield
+55,06876,Redding Ridge,Fairfield
+56,06877,Ridgefield,Fairfield
+57,06878,Riverside,Fairfield
+58,06879,Ridgefield,Fairfield
+59,06880,Westport,Fairfield
+60,06881,Westport,Fairfield
+61,06883,Weston,Fairfield
+62,06888,Westport,Fairfield
+63,06889,Westport,Fairfield
+64,06890,Southport,Fairfield
+65,06896,Redding,Fairfield
+66,06897,Wilton,Fairfield
+67,06901,Stamford,Fairfield
+68,06902,Stamford,Fairfield
+69,06903,Stamford,Fairfield
+70,06904,Stamford,Fairfield
+71,06905,Stamford,Fairfield
+72,06906,Stamford,Fairfield
+73,06907,Stamford,Fairfield
+74,06910,Stamford,Fairfield
+75,06911,Stamford,Fairfield
+76,06912,Stamford,Fairfield
+77,06913,Stamford,Fairfield
+78,06914,Stamford,Fairfield
+79,06920,Stamford,Fairfield
+80,06921,Stamford,Fairfield
+81,06922,Stamford,Fairfield
+82,06926,Stamford,Fairfield
+83,06927,Stamford,Fairfield
+84,06001,Avon,Hartford
+85,06002,Bloomfield,Hartford
+86,06006,Windsor,Hartford
+87,06010,Bristol,Hartford
+88,06011,Bristol,Hartford
+89,06013,Burlington,Hartford
+90,06016,Broad Brook,Hartford
+91,06019,Canton,Hartford
+92,06020,Canton Center,Hartford
+93,06022,Collinsville,Hartford
+94,06023,East Berlin,Hartford
+95,06025,East Glastonbury,Hartford
+96,06026,East Granby,Hartford
+97,06027,East Hartland,Hartford
+98,06028,East Windsor Hill,Hartford
+99,06030,Farmington,Hartford
+100,06032,Farmington,Hartford
+101,06033,Glastonbury,Hartford
+102,06034,Farmington,Hartford
+103,06035,Granby,Hartford
+104,06037,Berlin,Hartford
+105,06040,Manchester,Hartford
+106,06041,Manchester,Hartford
+107,06042,Manchester,Hartford
+108,06045,Manchester,Hartford
+109,06050,New Britain,Hartford
+110,06051,New Britain,Hartford
+111,06052,New Britain,Hartford
+112,06053,New Britain,Hartford
+113,06059,North Canton,Hartford
+114,06060,North Granby,Hartford
+115,06062,Plainville,Hartford
+116,06064,Poquonock,Hartford
+117,06067,Rocky Hill,Hartford
+118,06070,Simsbury,Hartford
+119,06073,South Glastonbury,Hartford
+120,06074,South Windsor,Hartford
+121,06078,Suffield,Hartford
+122,06080,Suffield,Hartford
+123,06081,Tariffville,Hartford
+124,06082,Enfield,Hartford
+125,06083,Enfield,Hartford
+126,06085,Unionville,Hartford
+127,06087,Unionville,Hartford
+128,06088,East Windsor,Hartford
+129,06089,Weatogue,Hartford
+130,06090,West Granby,Hartford
+131,06091,West Hartland,Hartford
+132,06092,West Simsbury,Hartford
+133,06093,West Suffield,Hartford
+134,06095,Windsor,Hartford
+135,06096,Windsor Locks,Hartford
+136,06101,Hartford,Hartford
+137,06102,Hartford,Hartford
+138,06103,Hartford,Hartford
+139,06104,Hartford,Hartford
+140,06105,Hartford,Hartford
+141,06106,Hartford,Hartford
+142,06107,West Hartford,Hartford
+143,06108,East Hartford,Hartford
+144,06109,Wethersfield,Hartford
+145,06110,West Hartford,Hartford
+146,06111,Newington,Hartford
+147,06112,Hartford,Hartford
+148,06114,Hartford,Hartford
+149,06115,Hartford,Hartford
+150,06117,West Hartford,Hartford
+151,06118,East Hartford,Hartford
+152,06119,West Hartford,Hartford
+153,06120,Hartford,Hartford
+154,06123,Hartford,Hartford
+155,06126,Hartford,Hartford
+156,06127,West Hartford,Hartford
+157,06128,East Hartford,Hartford
+158,06129,Wethersfield,Hartford
+159,06131,Newington,Hartford
+160,06132,Hartford,Hartford
+161,06133,West Hartford,Hartford
+162,06134,Hartford,Hartford
+163,06137,West Hartford,Hartford
+164,06138,East Hartford,Hartford
+165,06140,Hartford,Hartford
+166,06141,Hartford,Hartford
+167,06142,Hartford,Hartford
+168,06143,Hartford,Hartford
+169,06144,Hartford,Hartford
+170,06145,Hartford,Hartford
+171,06146,Hartford,Hartford
+172,06147,Hartford,Hartford
+173,06150,Hartford,Hartford
+174,06151,Hartford,Hartford
+175,06152,Hartford,Hartford
+176,06153,Hartford,Hartford
+177,06154,Hartford,Hartford
+178,06155,Hartford,Hartford
+179,06156,Hartford,Hartford
+180,06160,Hartford,Hartford
+181,06161,Hartford,Hartford
+182,06167,Hartford,Hartford
+183,06176,Hartford,Hartford
+184,06180,Hartford,Hartford
+185,06183,Hartford,Hartford
+186,06199,Hartford,Hartford
+187,06444,Marion,Hartford
+188,06447,Marlborough,Hartford
+189,06467,Milldale,Hartford
+190,06479,Plantsville,Hartford
+191,06489,Southington,Hartford
+192,06018,Canaan,Litchfield
+193,06021,Colebrook,Litchfield
+194,06024,East Canaan,Litchfield
+195,06031,Falls Village,Litchfield
+196,06039,Lakeville,Litchfield
+197,06057,New Hartford,Litchfield
+198,06058,Norfolk,Litchfield
+199,06061,Pine Meadow,Litchfield
+200,06063,Barkhamsted,Litchfield
+201,06065,Riverton,Litchfield
+202,06068,Salisbury,Litchfield
+203,06069,Sharon,Litchfield
+204,06079,Taconic,Litchfield
+205,06094,Winchester Center,Litchfield
+206,06098,Winsted,Litchfield
+207,06750,Bantam,Litchfield
+208,06751,Bethlehem,Litchfield
+209,06752,Bridgewater,Litchfield
+210,06753,Cornwall,Litchfield
+211,06754,Cornwall Bridge,Litchfield
+212,06755,Gaylordsville,Litchfield
+213,06756,Goshen,Litchfield
+214,06757,Kent,Litchfield
+215,06758,Lakeside,Litchfield
+216,06759,Litchfield,Litchfield
+217,06763,Morris,Litchfield
+218,06776,New Milford,Litchfield
+219,06777,New Preston Marble Dale,Litchfield
+220,06778,Northfield,Litchfield
+221,06779,Oakville,Litchfield
+222,06781,Pequabuck,Litchfield
+223,06782,Plymouth,Litchfield
+224,06783,Roxbury,Litchfield
+225,06785,South Kent,Litchfield
+226,06786,Terryville,Litchfield
+227,06787,Thomaston,Litchfield
+228,06790,Torrington,Litchfield
+229,06791,Harwinton,Litchfield
+230,06792,Torrington,Litchfield
+231,06793,Washington,Litchfield
+232,06794,Washington Depot,Litchfield
+233,06795,Watertown,Litchfield
+234,06796,West Cornwall,Litchfield
+235,06798,Woodbury,Litchfield
+236,06409,Centerbrook,Middlesex
+237,06412,Chester,Middlesex
+238,06413,Clinton,Middlesex
+239,06414,Cobalt,Middlesex
+240,06416,Cromwell,Middlesex
+241,06417,Deep River,Middlesex
+242,06419,Killingworth,Middlesex
+243,06422,Durham,Middlesex
+244,06423,East Haddam,Middlesex
+245,06424,East Hampton,Middlesex
+246,06426,Essex,Middlesex
+247,06438,Haddam,Middlesex
+248,06441,Higganum,Middlesex
+249,06442,Ivoryton,Middlesex
+250,06455,Middlefield,Middlesex
+251,06456,Middle Haddam,Middlesex
+252,06457,Middletown,Middlesex
+253,06459,Middletown,Middlesex
+254,06469,Moodus,Middlesex
+255,06475,Old Saybrook,Middlesex
+256,06480,Portland,Middlesex
+257,06481,Rockfall,Middlesex
+258,06498,Westbrook,Middlesex
+259,06401,Ansonia,New Haven
+260,06403,Beacon Falls,New Haven
+261,06405,Branford,New Haven
+262,06408,Cheshire,New Haven
+263,06410,Cheshire,New Haven
+264,06411,Cheshire,New Haven
+265,06418,Derby,New Haven
+266,06437,Guilford,New Haven
+267,06443,Madison,New Haven
+268,06450,Meriden,New Haven
+269,06451,Meriden,New Haven
+270,06460,Milford,New Haven
+271,06461,Milford,New Haven
+272,06471,North Branford,New Haven
+273,06472,Northford,New Haven
+274,06473,North Haven,New Haven
+275,06477,Orange,New Haven
+276,06478,Oxford,New Haven
+277,06483,Seymour,New Haven
+278,06487,South Britain,New Haven
+279,06488,Southbury,New Haven
+280,06492,Wallingford,New Haven
+281,06493,Wallingford,New Haven
+282,06494,Wallingford,New Haven
+283,06495,Wallingford,New Haven
+284,06501,New Haven,New Haven
+285,06502,New Haven,New Haven
+286,06503,New Haven,New Haven
+287,06504,New Haven,New Haven
+288,06505,New Haven,New Haven
+289,06506,New Haven,New Haven
+290,06507,New Haven,New Haven
+291,06508,New Haven,New Haven
+292,06509,New Haven,New Haven
+293,06510,New Haven,New Haven
+294,06511,New Haven,New Haven
+295,06512,New Haven,New Haven
+296,06513,New Haven,New Haven
+297,06514,Hamden,New Haven
+298,06515,New Haven,New Haven
+299,06516,West Haven,New Haven
+300,06517,Hamden,New Haven
+301,06518,Hamden,New Haven
+302,06519,New Haven,New Haven
+303,06520,New Haven,New Haven
+304,06521,New Haven,New Haven
+305,06524,Bethany,New Haven
+306,06525,New Haven,New Haven
+307,06530,New Haven,New Haven
+308,06531,New Haven,New Haven
+309,06532,New Haven,New Haven
+310,06533,New Haven,New Haven
+311,06534,New Haven,New Haven
+312,06535,New Haven,New Haven
+313,06536,New Haven,New Haven
+314,06537,New Haven,New Haven
+315,06538,New Haven,New Haven
+316,06540,New Haven,New Haven
+317,06701,Waterbury,New Haven
+318,06702,Waterbury,New Haven
+319,06703,Waterbury,New Haven
+320,06704,Waterbury,New Haven
+321,06705,Waterbury,New Haven
+322,06706,Waterbury,New Haven
+323,06708,Waterbury,New Haven
+324,06710,Waterbury,New Haven
+325,06712,Prospect,New Haven
+326,06716,Wolcott,New Haven
+327,06720,Waterbury,New Haven
+328,06721,Waterbury,New Haven
+329,06722,Waterbury,New Haven
+330,06723,Waterbury,New Haven
+331,06724,Waterbury,New Haven
+332,06725,Waterbury,New Haven
+333,06726,Waterbury,New Haven
+334,06749,Waterbury,New Haven
+335,06762,Middlebury,New Haven
+336,06770,Naugatuck,New Haven
+337,06249,Lebanon,New London
+338,06254,North Franklin,New London
+339,06320,New London,New London
+340,06330,Baltic,New London
+341,06333,East Lyme,New London
+342,06334,Bozrah,New London
+343,06335,Gales Ferry,New London
+344,06336,Gilman,New London
+345,06338,Mashantucket,New London
+346,06339,Ledyard,New London
+347,06340,Groton,New London
+348,06349,Groton,New London
+349,06350,Hanover,New London
+350,06351,Jewett City,New London
+351,06353,Montville,New London
+352,06355,Mystic,New London
+353,06357,Niantic,New London
+354,06359,North Stonington,New London
+355,06360,Norwich,New London
+356,06365,Preston,New London
+357,06370,Oakdale,New London
+358,06371,Old Lyme,New London
+359,06372,Old Mystic,New London
+360,06375,Quaker Hill,New London
+361,06376,South Lyme,New London
+362,06378,Stonington,New London
+363,06379,Pawcatuck,New London
+364,06380,Taftville,New London
+365,06382,Uncasville,New London
+366,06383,Versailles,New London
+367,06384,Voluntown,New London
+368,06385,Waterford,New London
+369,06388,West Mystic,New London
+370,06389,Yantic,New London
+371,06415,Colchester,New London
+372,06420,Salem,New London
+373,06439,Hadlyme,New London
+374,06474,North Westchester,New London
+375,06029,Ellington,Tolland
+376,06043,Bolton,Tolland
+377,06066,Vernon Rockville,Tolland
+378,06071,Somers,Tolland
+379,06072,Somersville,Tolland
+380,06075,Stafford,Tolland
+381,06076,Stafford Springs,Tolland
+382,06077,Staffordville,Tolland
+383,06084,Tolland,Tolland
+384,06231,Amston,Tolland
+385,06232,Andover,Tolland
+386,06237,Columbia,Tolland
+387,06238,Coventry,Tolland
+388,06248,Hebron,Tolland
+389,06250,Mansfield Center,Tolland
+390,06251,Mansfield Depot,Tolland
+391,06265,South Willington,Tolland
+392,06268,Storrs Mansfield,Tolland
+393,06269,Storrs Mansfield,Tolland
+394,06279,Willington,Tolland
+395,06226,Willimantic,Windham
+396,06230,Abington,Windham
+397,06233,Ballouville,Windham
+398,06234,Brooklyn,Windham
+399,06235,Chaplin,Windham
+400,06239,Danielson,Windham
+401,06241,Dayville,Windham
+402,06242,Eastford,Windham
+403,06243,East Killingly,Windham
+404,06244,East Woodstock,Windham
+405,06245,Fabyan,Windham
+406,06246,Grosvenor Dale,Windham
+407,06247,Hampton,Windham
+408,06255,North Grosvenordale,Windham
+409,06256,North Windham,Windham
+410,06258,Pomfret,Windham
+411,06259,Pomfret Center,Windham
+412,06260,Putnam,Windham
+413,06262,Quinebaug,Windham
+414,06263,Rogers,Windham
+415,06264,Scotland,Windham
+416,06266,South Windham,Windham
+417,06267,South Woodstock,Windham
+418,06277,Thompson,Windham
+419,06278,Ashford,Windham
+420,06280,Windham,Windham
+421,06281,Woodstock,Windham
+422,06282,Woodstock Valley,Windham
+423,06331,Canterbury,Windham
+424,06332,Central Village,Windham
+425,06354,Moosup,Windham
+426,06373,Oneco,Windham
+427,06374,Plainfield,Windham
+428,06377,Sterling,Windham
+429,06387,Wauregan,Windham

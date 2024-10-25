@@ -20,4 +20,9 @@ class Town extends Model
 	{
 		return $this->hasMany(FarmersMarket::class);
 	}
+
+	public function zipCodes()
+	{
+		return $this->hasMany(ZipCode::class);
+	}
 }
