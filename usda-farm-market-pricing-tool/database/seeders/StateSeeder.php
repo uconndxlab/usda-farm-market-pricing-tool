@@ -13,9 +13,12 @@ class StateSeeder extends Seeder
      */
     public function run(): void
     {
-        State::create([
-			'name' => 'Connecticut',
-			'state_code' => 'CT',
-		]);
+        State::firstOrCreate(
+            ['state_code' => 'CT'],
+            [
+                'name' => 'Connecticut',
+                'state_code' => 'CT',
+            ]
+        );
     }
 }
