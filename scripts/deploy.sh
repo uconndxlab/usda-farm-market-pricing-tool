@@ -21,7 +21,7 @@ chmod -R g+w .
 
 if [ -d /var/www/marketpricing.core.uconn.edu/ ]; then
     echo "Copying files to the server"
-    rsync -arv --omit-dir-times --no-t ./ /var/www/marketpricing.core.uconn.edu/
+    rsync -arv --omit-dir-times --no-t --no-perms ./ /var/www/marketpricing.core.uconn.edu/
 
     cd /var/www/marketpricing.core.uconn.edu
     php artisan migrate --force
