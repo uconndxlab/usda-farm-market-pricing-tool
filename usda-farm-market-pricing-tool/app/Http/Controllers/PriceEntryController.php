@@ -22,8 +22,11 @@ class PriceEntryController extends Controller
 
     public function index(Request $request)
 	{
-		
-		$crops = ["Apples", "Tomatoes", "Potatoes", "Carrots"];
+		$tree_fruits = ["Apple", "Cherry Sour", "Cherry Sweet", "Nectarine", "Peach", "Pear", "Plum"];
+		$small_fruits = ["Blackberry", "Blueberry", "Raspberry", "Strawberry", "Table Grapes"];
+		$vegetables = ["Asparagus", "Beans", "Beets", "Broccoli", "Carrot", "Cauliflower", "Celery", "Cucumber", "Eggplant", "Garlic", "Kale", "Lettuce Head", "Lettuce Leaf", "Melon", "Onions", "Peas", "Peppers Hot", "Peppers Sweet", "Radish", "Rhubarb", "Snow Peas", "Spinach", "Squash Summer", "Squash Winter", "Sweet Corn", "Tomato Cherry", "Tomato Heirloom", "Tomato Large"];
+		$herbs = ["Lavendar", "Basil", "Chives", "Mints", "Parsley"];
+		$crops = array_merge($tree_fruits, $small_fruits, $vegetables, $herbs);
 		$cropVarieties = ["Granny Smith", "Red Delicious", "Golden Delicious", "Gala", "Fuji", "Honeycrisp"];
 		$productionMethods = ["Conventional", "Organic"];
 		$salesMethods = ["Wholesale", "Direct To Consumer"];
@@ -35,7 +38,7 @@ class PriceEntryController extends Controller
 	{
 		$request->validate([
 			'crop' => 'required|string|max:255',
-			'crop_variety' => 'required|string|max:255',
+			'crop_variety' => 'nullable|string|max:255',
 			'production_method' => 'required|string|max:255',
 			'sales_method' => 'required|string|max:255',
 			'unit' => 'required|string|max:255',

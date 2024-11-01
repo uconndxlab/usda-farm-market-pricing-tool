@@ -47,7 +47,7 @@
 							
 							<div>
 								<label for="crop_variety" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop Variety</label>
-								<select id="crop_variety" name="crop_variety" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
+								<select id="crop_variety" name="crop_variety" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900">
 									<option value="">Select a crop variety</option>
 									@foreach ($cropVarieties as $cropVariety)
 										<option value="{{ $cropVariety }}">{{ $cropVariety }}</option>
