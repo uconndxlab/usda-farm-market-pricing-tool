@@ -38,7 +38,7 @@ class PriceEntryController extends Controller
 	{
 		$request->validate([
 			'crop' => 'required|string|max:255',
-			'crop_variety' => 'required|string|max:255',
+			'crop_variety' => 'nullable|string|max:255',
 			'production_method' => 'required|string|max:255',
 			'sales_method' => 'required|string|max:255',
 			'unit' => 'required|string|max:255',

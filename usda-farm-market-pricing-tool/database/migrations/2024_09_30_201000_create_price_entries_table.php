@@ -17,7 +17,7 @@ return new class extends Migration
 			$table->string('town');
 			$table->string('farmers_market')->nullable();
 			$table->string('crop');
-			$table->string('variety');
+			$table->string('variety')->nullable();
 			$table->string('production_method');
 			$table->string('sales_method');
 			$table->string('unit');
