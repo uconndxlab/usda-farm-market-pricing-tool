@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\PriceEntry;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\County;
+use App\Models\Town;
+
 
 class PriceEntryController extends Controller
 {
@@ -12,6 +16,47 @@ class PriceEntryController extends Controller
 		$user = auth()->user();
 		$priceEntries = PriceEntry::where('user_id', $user->id)->get();
 		return view('dashboard', compact('priceEntries'));
+	}
+
+	public function showAllEntries()
+	{
+		$priceEntries = PriceEntry::all();
+		$crops = PriceEntry::distinct()->pluck('crop');
+		$counties = County::all();
+		$towns = Town::all();
+		$towns = $towns->sortBy('name')->pluck('name', 'id');
+
+		return view('price-entry.all', compact('priceEntries', 'crops', 'counties', 'towns'));
+	}
+
+
+	public function exportAllEntriesToCsv(Request $request) {
+		$priceEntries = PriceEntry::all();
+		$filename = 'price_entries_' . date('Y-m-d_H-i-s') . '.csv';
+		$handle = fopen('php://output', 'w');
+		
+		header('Content-Type: text/csv');
+		header('Content-Disposition: attachment; filename="' . $filename . '"');
+		
+		fputcsv($handle, ['ID', 'User ID', 'Town', 'Farmers Market', 'Crop', 'Variety', 'Production Method', 'Sales Method', 'Unit', 'Price Per Unit']);
+		
+		foreach ($priceEntries as $entry) {
+			fputcsv($handle, [
+				$entry->id,
+				$entry->user_id,
+				$entry->town,
+				$entry->farmers_market,
+				$entry->crop,
+				$entry->variety,
+				$entry->production_method,
+				$entry->sales_method,
+				$entry->unit,
+				$entry->price_per_unit
+			]);
+		}
+		
+		fclose($handle);
+		exit;
 	}
 
 	public function showPrice(Request $request, $id)

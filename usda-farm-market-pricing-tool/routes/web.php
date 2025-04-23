@@ -40,6 +40,10 @@ Route::middleware('auth')->group(function () {
 
 // Price entry routes
 Route::middleware('auth')->group(function () {
+	Route::get('/price-entry/export', [PriceEntryController::class, 'exportAllEntriesToCsv'])->name('price-entry.export');
+
+	Route::get('/price-entry/all', [PriceEntryController::class, 'showAllEntries'])->name('price-entry.all');
+
 	Route::get('/price-entry/{id}', [PriceEntryController::class, 'showPrice'])->name('price-entry.show');
 	Route::delete('/price-entry/{id}', [PriceEntryController::class, 'deletePrice'])->name('price-entry.delete');
 	Route::get('/price-entry', [PriceEntryController::class, 'index'])->middleware('check.town')->name('price-entry.index');
