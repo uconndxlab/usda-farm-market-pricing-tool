@@ -19,6 +19,7 @@ class PriceEntry extends Model
 		'sales_method',
 		'unit',
 		'price_per_unit',
+		'date_collected', // Added date_collected field
 	];
 
 	public function user()

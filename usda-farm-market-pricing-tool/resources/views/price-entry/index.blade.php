@@ -35,6 +35,12 @@
                     <form action="{{ route('price-entry.store') }}" method="POST">
                         @csrf
 						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-x-10 mb-2">
+							
+							<div>
+								<label for="date_collected" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Date Collected</label>
+								<input type="date" id="date_collected" name="date_collected" value="{{ now()->toDateString() }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>
+							</div>
+							
 							<div>
 								<label for="crop" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Crop</label>
 								<select id="crop" name="crop" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-gray-900" required>

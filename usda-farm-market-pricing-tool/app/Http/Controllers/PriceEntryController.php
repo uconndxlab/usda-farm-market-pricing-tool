@@ -38,12 +38,13 @@ class PriceEntryController extends Controller
 		header('Content-Type: text/csv');
 		header('Content-Disposition: attachment; filename="' . $filename . '"');
 		
-		fputcsv($handle, ['ID', 'User ID', 'Town', 'Farmers Market', 'Crop', 'Variety', 'Production Method', 'Sales Method', 'Unit', 'Price Per Unit']);
+		fputcsv($handle, ['ID', 'User ID', 'Date Collected', 'Town', 'Farmers Market', 'Crop', 'Variety', 'Production Method', 'Sales Method', 'Unit', 'Price Per Unit']);
 		
 		foreach ($priceEntries as $entry) {
 			fputcsv($handle, [
 				$entry->id,
 				$entry->user_id,
+				$entry->date_collected,
 				$entry->town,
 				$entry->farmers_market,
 				$entry->crop,
@@ -101,6 +102,7 @@ class PriceEntryController extends Controller
 			'sales_method' => $request->input('sales_method'),
 			'unit' => $request->input('unit'),
 			'price_per_unit' => $request->input('price_per_unit'),
+			'date_collected' => $request->input('date_collected') ? date('Y-m-d', strtotime($request->input('date_collected'))) : null,
 		]);
 
 		return redirect()->route('price-entry.index')->with('success', 'Price entry saved successfully');

@@ -35,6 +35,7 @@
                             <thead>
                                 <tr>
 									<th class="px-1 py-3 bg-gray-50 dark:bg-gray-700 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"></th>
+                                    <th class="px-2 py-3 bg-gray-50 dark:bg-gray-700 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Date Collected</th>
                                     <th class="px-3 py-3 bg-gray-50 dark:bg-gray-700 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Town</th>
                                     <th class="px-3 py-3 bg-gray-50 dark:bg-gray-700 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Farmers Market</th>
                                     <th class="px-3 py-3 bg-gray-50 dark:bg-gray-700 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Crop</th>
@@ -54,7 +55,9 @@
 											View
 										</a>
 									</td>
+                                    <td class="px-2 py-4">{{ \Carbon\Carbon::parse($entry->date_collected)->format('Y-m-d') }}</td>
                                     <td class="px-2 py-4">{{ $entry->town }}</td>
+
                                     <td class="px-2 py-4">{{ $entry->farmers_market }}</td>
                                     <td class="px-2 py-4">{{ $entry->crop }}</td>
                                     <td class="px-2 py-4 hidden lg:table-cell">{{ $entry->variety }}</td>
