@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PriceEntryController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,12 @@ Route::get('/', function () {
 Route::get('/dashboard', [PriceEntryController::class, 'showDashboard'])
 	->middleware(['auth', 'verified'])
 	->name('dashboard');
+
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'admin'])->group(function () {
+	Route::get('/', [AdminController::class, 'index'])->name('index');
+	Route::get('/users', [AdminController::class, 'users'])->name('users');
+	Route::get('/entries', [AdminController::class, 'entries'])->name('entries');
+});
 
 // Profile routes
 Route::middleware('auth')->group(function () {

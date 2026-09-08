@@ -22,6 +22,11 @@ class PriceEntry extends Model
 		'date_collected', // Added date_collected field
 	];
 
+	protected $casts = [
+		'date_collected' => 'date',
+		'price_per_unit' => 'decimal:2',
+	];
+
 	public function user()
 	{
 		return $this->belongsTo(User::class);
